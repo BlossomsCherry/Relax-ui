@@ -1,0 +1,11 @@
+.r-footer {
+    display: flex;
+    height: 20%;
+    max-height: 80px;
+    text-align: center;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background-color: #c6e2ff;
+    color: var(--primary-text-color);
+}

@@ -1,0 +1,8 @@
+.r-aside {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #d9ecff;
+}

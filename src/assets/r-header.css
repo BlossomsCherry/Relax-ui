@@ -1,0 +1,12 @@
+.r-header {
+    display: flex;
+    height: 20%;
+    max-height: 80px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #c6e2ff;
+    color: var(--primary-text-color);
+}

@@ -1,0 +1,7 @@
+.r-container {
+    display: flex;
+    height: 100%;
+    flex: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+}
