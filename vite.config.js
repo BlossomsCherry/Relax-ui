@@ -1,14 +1,19 @@
-import { fileURLToPath, URL } from 'node:url'
-
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import Markdown from 'vite-plugin-vue-markdown'
+import Vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    Vue({
+      include: [/\.vue$/, /\.md$/] // <--
+    }),
+    Markdown()
+  ],
   build: {
     lib: {
-      entry: './src/components/index.js', // 你的入口文件路径
+      entry: './packages/index.js', // 你的入口文件路径
       name: 'Relaxing-ui', // 你的库名称
       fileName: (format) => `relaxing-ui.${format}.js` // 打包后的文件名
     },
@@ -24,8 +29,9 @@ export default defineConfig({
     }
   },
   resolve: {
+    // 配置路径别名
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': resolve(__dirname, 'src') // 路径别名
     }
   }
 })

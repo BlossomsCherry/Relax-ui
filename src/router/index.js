@@ -14,12 +14,60 @@ const router = createRouter({
       //二级路由
       children: [
         {
-          path: '/button',
-          component: () => import('../components/Button/src/index.vue')
+          path: '/home',
+          component: () => import('../views/home.vue')
         },
         {
-          path: '/container',
-          component: () => import('../components/Container/src/index.vue')
+          path: '/componentsUI',
+          redirect: '/componentsUI/button',
+          component: () => import('../components/componentsUI/index.vue'),
+          children: [
+            {
+              path: 'layout',
+              name: 'Layout',
+              component: () => import('../../packages/Layout/doc/doc.md')
+            },
+            {
+              path: 'color',
+              name: 'Color',
+              component: () => import('../../packages/Color/doc/doc.md')
+            },
+            {
+              path: 'icon',
+              name: 'Icon',
+              component: () => import('../../packages/Icon/doc/doc.md')
+            },
+            {
+              path: 'button',
+              name: 'Button',
+              component: () => import('../../packages/Button/doc/doc.md')
+            },
+            {
+              path: 'input',
+              name: 'Input',
+              component: () => import('../../packages/Input/doc/doc.md')
+            },
+            {
+              path: 'Dropdown',
+              name: 'Dropdown',
+              component: () => import('../../packages/Dropdown/doc/show.vue')
+            },
+            {
+              path: 'Link',
+              name: 'Link',
+              component: () => import('../../packages/Link/doc/show.vue')
+            },
+            {
+              path: 'Message',
+              name: 'Message',
+              component: () => import('../../packages/Message/doc/doc.md')
+            },
+            {
+              path: 'Rate',
+              name: 'Rate',
+              component: () => import('../../packages/Rate/doc/show.vue')
+            }
+          ]
         }
       ]
     }
