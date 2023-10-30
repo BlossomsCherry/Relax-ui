@@ -1,5 +1,5 @@
 <template>
-  <r-space>
+  <r-space inline>
     <r-button @click="messageOpen1">自定义Icon</r-button>
     <r-button @click="messageOpen2">5秒后消失</r-button>
   </r-space>

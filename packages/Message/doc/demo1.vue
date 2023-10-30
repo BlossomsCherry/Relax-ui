@@ -1,11 +1,12 @@
 <template>
-  <r-space>
+  <r-space inline>
     <rButton @click="messageOpen">消息提示</rButton>
     <rButton @click="messageOpen">VNode</rButton>
   </r-space>
 </template>
 <script setup>
-import Message from '../index'
+import Message from '../index.js'
+// import { Message } from 'relaxing-ui'
 
 const messageOpen = () => {
   Message({

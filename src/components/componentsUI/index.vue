@@ -36,6 +36,28 @@ const active = (index) => {
   .left {
     width: 315px;
     border-right: 1px solid #ccc;
+    overflow-y: scroll;
+    /* 设置浏览器滚动条样式 */
+    &::-webkit-scrollbar {
+      width: 6px;
+      /* 滚动条宽度 */
+      /* 隐藏滚动条 */
+      // display: none;
+      // scrollbar-width: none;
+      // -ms-overflow-style: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      /* 滚动条拖动部分的颜色 */
+      background-color: #dddee0;
+      /* 滚动条设置为圆角 */
+      -webkit-border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #fff;
+      /* 滚动条轨道的颜色 */
+    }
     ul {
       li {
         padding-left: 50px;

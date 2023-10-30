@@ -1,2 +1,4 @@
 @import './base.less';
-@import './theme.css'
+@import './theme.css';
+/* 代码高亮配置 */
+@import './pre.css'

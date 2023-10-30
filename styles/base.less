@@ -29,6 +29,10 @@ li {
 body::-webkit-scrollbar {
   width: 6px;
   /* 滚动条宽度 */
+  /* 隐藏滚动条 */
+  display: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -41,6 +45,34 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-track {
   background-color: #fff;
   /* 滚动条轨道的颜色 */
+}
+pre {
+  margin: 0;
+}
+pre > code {
+  font-family:
+    Lucida Console,
+    Consolas,
+    Monaco,
+    Andale Mono,
+    Ubuntu Mono,
+    monospace;
+  line-height: 1.7;
+  direction: ltr;
+  white-space: pre;
+  text-align: left;
+  word-wrap: normal;
+  word-break: normal;
+  word-spacing: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  background: 0 0;
+  font-size: 14px;
+  border: 1px solid #f0f0f0;
 }
 
 .color-itembox {

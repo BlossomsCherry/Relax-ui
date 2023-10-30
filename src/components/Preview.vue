@@ -10,7 +10,8 @@
     </transition>
     <div class="showCode" @click="showOrhideCode">
       <span>{{ showCode ? '隐藏代码' : '显示代码' }}</span>
-      <i class="m-icon-code"></i>
+      <i v-if="!showCode" class="m-icon-arrow-down-bold"></i>
+      <i v-else class="m-icon-arrow-up-bold"></i>
     </div>
     <textarea id="inputCopy" />
   </div>
@@ -18,7 +19,8 @@
 
 <script setup>
 import { onMounted, ref, defineProps } from 'vue'
-import Message from '../../packages/message/index'
+import Message from '../../packages/Message/index'
+
 const props = defineProps({
   compName: {
     type: String,
@@ -63,12 +65,12 @@ const copyCode = () => {
     document.execCommand('copy')
     Message({
       type: 'success',
-      text: '代码复制成功'
+      message: '代码复制成功'
     })
   } else {
     Message({
       type: 'error',
-      text: '代码复制失败'
+      message: '代码复制失败'
     })
   }
 }
@@ -77,7 +79,7 @@ onMounted(() => {
 })
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="less">
 #inputCopy {
   opacity: 0;
   border: 0;
@@ -107,6 +109,7 @@ onMounted(() => {
   margin: 0px 0 15px 0;
   position: relative;
   transition: all 0.15s ease-out;
+  font-size: 16px;
   .m-copy {
     position: absolute;
     top: 10px;

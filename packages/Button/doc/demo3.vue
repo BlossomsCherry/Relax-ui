@@ -1,6 +1,6 @@
 <template>
   <!-- 加载状态 -->
-  <r-space>
+  <r-space inline>
     <r-button Loading leftIcon="m-icon-loading1"></r-button>
     <r-button type="success" Loading leftIcon="m-icon-loading6">Success</r-button>
     <r-button type="warn" Loading leftIcon="m-icon-loading2">Warn</r-button>

@@ -48,6 +48,16 @@ const router = createRouter({
               component: () => import('../../packages/Input/doc/doc.md')
             },
             {
+              path: 'switch',
+              name: 'Switch',
+              component: () => import('../../packages/Switch/doc/doc.md')
+            },
+            {
+              path: 'loading',
+              name: 'Loading',
+              component: () => import('../../packages/Loading/doc/doc.md')
+            },
+            {
               path: 'Dropdown',
               name: 'Dropdown',
               component: () => import('../../packages/Dropdown/doc/show.vue')
@@ -65,7 +75,7 @@ const router = createRouter({
             {
               path: 'Rate',
               name: 'Rate',
-              component: () => import('../../packages/Rate/doc/show.vue')
+              component: () => import('../../packages/Rate/doc/doc.md')
             }
           ]
         }

@@ -1,7 +1,5 @@
 <template>
-  <div class="order">
-    <h2>order</h2>
-  </div>
+  <r-button type="primary">开始加载</r-button>
 </template>
 <script setup></script>
 

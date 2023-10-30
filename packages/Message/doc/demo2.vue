@@ -1,5 +1,5 @@
 <template>
-  <r-space>
+  <r-space inline>
     <r-button @click="messageOpen1">success</r-button>
     <r-button @click="messageOpen2">warn</r-button>
     <r-button @click="messageOpen3">error</r-button>

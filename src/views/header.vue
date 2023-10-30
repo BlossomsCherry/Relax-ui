@@ -4,18 +4,20 @@
       <h2>RELAX-UI</h2>
     </div>
     <div class="right">
-      <ul>
-        <li>
-          <router-link to="/home">主页</router-link>
-        </li>
-        <li>
-          <router-link to="/componentsUI">UI组件</router-link>
-        </li>
-      </ul>
+      <router-link to="/home" :class="{ active: isActive === 0 }" @click="isActive = 0"
+        >指南</router-link
+      >
+      <router-link to="/componentsUI" :class="{ active: isActive === 1 }" @click="isActive = 1"
+        >组件</router-link
+      >
     </div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+
+const isActive = ref(0)
+</script>
 
 <style lang="less" scoped>
 .header {
@@ -31,26 +33,18 @@
     color: var(--primary-color);
   }
   .right {
-    ul {
-      display: flex;
-      li {
-        position: relative;
-        width: 100px;
-        line-height: 80px;
-        text-align: center;
-        cursor: pointer;
-        a {
-          height: 80px;
-          &::after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 2px;
-            left: 26px;
-            bottom: 20px;
-            background-color: black;
-          }
-        }
+    display: flex;
+    align-items: center;
+    a {
+      margin-right: 20px;
+      padding: 10px 5px;
+      border-bottom: 2px solid transparent;
+      &:hover {
+        color: var(--primary-color);
+      }
+      &.active {
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--primary-color);
       }
     }
   }

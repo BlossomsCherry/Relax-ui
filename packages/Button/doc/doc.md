@@ -5,6 +5,7 @@
     import demo4 from './demo4.vue'
     import demo5 from './demo5.vue'
     import componentsBox from '@/components/componentBox.vue'
+    import Preview from '@/components/Preview.vue'
 </script>
 
 # Button 按钮
@@ -21,7 +22,7 @@
 <componentsBox>
     <demo1/>
 </componentsBox>
-<br/>
+<Preview compName="Button" demoName="demo1"></Preview>
 
 ## 禁用状态
 
@@ -31,7 +32,7 @@
 <componentsBox>
     <demo2/>
 </componentsBox>
-<br/>
+<Preview compName="Button" demoName="demo2"></Preview>
 
 ## 图标按钮
 
@@ -41,7 +42,7 @@
 <componentsBox>
     <demo4/>
 </componentsBox>
-<br/>
+<Preview compName="Button" demoName="demo3"></Preview>
 
 ## 加载状态
 
@@ -51,7 +52,7 @@
 <componentsBox>
     <demo3/>
 </componentsBox>
-<br/>
+<Preview compName="Button" demoName="demo4"></Preview>
 
 ## 自定义颜色
 
@@ -61,4 +62,4 @@
 <componentsBox>
     <demo5/>
 </componentsBox>
-<br/>
+<Preview compName="Button" demoName="demo5"></Preview>

@@ -1,5 +1,5 @@
 <template>
-  <div class="space" ref="spaceRef">
+  <div class="r-space" :style="styles" ref="spaceRef">
     <slot></slot>
   </div>
 </template>
@@ -9,27 +9,26 @@ export default {
 }
 </script>
 <script setup>
-import { ref, defineProps, nextTick } from 'vue'
+import { defineProps, computed } from 'vue'
 
 const props = defineProps({
-  margin: {
-    typeof: Number,
-    default: 5
+  inline: Boolean,
+  size: {
+    type: Array,
+    default: () => [10, 10]
   }
 })
 
-const spaceRef = ref(null)
-nextTick(() => {
-  spaceRef.value.style.margin = `${props.margin}px 0px`
+const styles = computed(() => {
+  return {
+    display: props.inline ? 'inline-flex' : 'flex',
+    margin: `${props.size[0] / 2}px 0px`,
+    gap: `${props.size[1]}px`,
+    flexDirection: props.inline ? 'inherit' : 'column',
+    flexWrap: 'wrap',
+    width: props.inline ? '100%' : 'fit-content'
+  }
 })
 </script>
 
-<style lang="less" scoped>
-.space {
-  display: inline-flex;
-  width: 100%;
-  flex-direction: inherit;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-</style>
+<style lang="less" scoped></style>

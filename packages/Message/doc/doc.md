@@ -1,8 +1,9 @@
 <script setup>
     import demo1 from './demo1.vue'
     import demo2 from './demo2.vue'
-     import demo3 from './demo3.vue'
+    import demo3 from './demo3.vue'
     import componentBox from '@/components/componentBox.vue'
+    import Preview from '@/components/Preview.vue'
 </script>
 
 # Message 消息提示
@@ -19,7 +20,7 @@
 <component-box>
     <demo1/>
 </component-box>
-<br/>
+<Preview compName="Message" demoName="demo1"></Preview>
 
 ## 不同状态
 
@@ -29,7 +30,7 @@
 <component-box>
     <demo2/>
 </component-box>
-<br/>
+<Preview compName="Message" demoName="demo2"></Preview>
 
 ## 自定义配置
 
@@ -39,4 +40,4 @@
 <component-box>
     <demo3/>
 </component-box>
-<br/>
+<Preview compName="Message" demoName="demo3"></Preview>

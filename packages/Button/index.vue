@@ -100,7 +100,7 @@ const isIconClass = computed(() => {
 <style lang="less" scoped>
 .r-button {
   padding: 8px 15px;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid #ccc;
   background-color: #fff;
   color: #666;

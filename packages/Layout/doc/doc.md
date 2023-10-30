@@ -2,6 +2,7 @@
     import demo1 from './demo1.vue'
     import demo2 from './demo2.vue'
     import componentBox from '@/components/componentBox.vue'
+    import Preview from '@/components/Preview.vue'
 </script>
 
 # Layout布局
@@ -18,7 +19,7 @@
 <component-box>
     <demo1/>
 </component-box>
-<br/>
+<Preview compName="Layout" demoName="demo1"></Preview>
 
 ## 分栏间距
 
@@ -30,3 +31,4 @@
 <component-box>
     <demo2/>
 </component-box>
+<Preview compName="Layout" demoName="demo2"></Preview>
