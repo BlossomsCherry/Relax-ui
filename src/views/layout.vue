@@ -24,6 +24,6 @@ import Header from './header.vue'
   z-index: 999;
 }
 .content {
-  margin-top: 90px;
+  // margin-top: 90px;
 }
 </style>

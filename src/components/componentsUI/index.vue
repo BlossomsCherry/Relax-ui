@@ -23,6 +23,7 @@ import list from './list.json'
 <style lang="less" scoped>
 .components {
   display: flex;
+  margin-top: 90px;
   .left {
     display: flex;
     padding: 0px 32px 96px 87px;

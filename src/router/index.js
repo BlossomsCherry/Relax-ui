@@ -10,6 +10,7 @@ const router = createRouter({
     },
     {
       path: '/layout',
+      redirect: '/home',
       component: () => import('../views/layout.vue'),
       //二级路由
       children: [
