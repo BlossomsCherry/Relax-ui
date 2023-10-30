@@ -4,7 +4,9 @@
       {{ modelValue ? onText : closeText }}</span
     >
     <div class="r-switch_content" :style="contentStyle" @click="isChecked">
-      <div class="r-switch_round" :style="roundStyle"></div>
+      <div class="r-switch_round" :style="roundStyle">
+        <slot> </slot>
+      </div>
       <span v-show="showText" class="text" :style="textStyle">{{ modelValue ? '关' : '开' }}</span>
     </div>
     <span v-if="textAlign === 'right'" :style="alignStyle">{{
@@ -18,14 +20,14 @@ export default {
 }
 </script>
 <script setup>
-import { ref, defineProps, defineEmits, watchEffect } from 'vue'
+import { ref, defineProps, defineEmits, watchEffect, computed } from 'vue'
 
 const emit = defineEmits(['update:modelValue', 'change'])
 const props = defineProps({
   modelValue: Boolean,
   disabled: Boolean,
   width: {
-    type: Number || String,
+    type: Number,
     default: 40
   },
   onColor: {
@@ -34,7 +36,7 @@ const props = defineProps({
   },
   closeColor: {
     type: String,
-    default: '#dcdfe6'
+    default: '#f2f2f2'
   },
   showText: Boolean,
   closeText: {
@@ -48,13 +50,21 @@ const props = defineProps({
   textAlign: String
 })
 
-const contentStyle = ref({
-  backgroundColor: props.closeColor,
-  cursor: props.disabled ? 'not-allowed' : 'pointer',
-  width: props.width + 'px'
+const contentStyle = computed(() => {
+  return {
+    backgroundColor: props.closeColor,
+    cursor: props.disabled ? 'not-allowed' : 'pointer',
+    width: props.width + 'px'
+  }
 })
+
 const alignStyle = ref({ fontSize: '14px', color: '#ccc', margin: '0 5px' })
-const roundStyle = ref({ left: '2px' })
+const roundStyle = ref({
+  left: '2px',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center'
+})
 const textStyle = ref({ right: '4px' })
 const flag = ref(props.modelValue) //true为打开，false为关闭（默认为false）
 
@@ -93,9 +103,9 @@ watchEffect(() => {
     min-width: 40px;
     height: 20px;
     border-radius: 15px;
-    background-color: #dcdfe6;
     align-items: center;
     .r-switch_round {
+      display: flex;
       position: absolute;
       left: 2px;
       top: 2px;
@@ -104,6 +114,9 @@ watchEffect(() => {
       border-radius: 50px;
       background-color: #fff;
       transition: all 0.3s ease-in-out;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
     }
     .text {
       position: absolute;

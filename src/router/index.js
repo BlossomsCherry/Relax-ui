@@ -19,41 +19,41 @@ const router = createRouter({
         },
         {
           path: '/componentsUI',
-          redirect: '/componentsUI/button',
+          redirect: '/componentsUI/Layout',
           component: () => import('../components/componentsUI/index.vue'),
           children: [
             {
-              path: 'layout',
+              path: 'Layout',
               name: 'Layout',
               component: () => import('../../packages/Layout/doc/doc.md')
             },
             {
-              path: 'color',
+              path: 'Color',
               name: 'Color',
               component: () => import('../../packages/Color/doc/doc.md')
             },
             {
-              path: 'icon',
+              path: 'Icon',
               name: 'Icon',
               component: () => import('../../packages/Icon/doc/doc.md')
             },
             {
-              path: 'button',
+              path: 'Button',
               name: 'Button',
               component: () => import('../../packages/Button/doc/doc.md')
             },
             {
-              path: 'input',
+              path: 'Input',
               name: 'Input',
               component: () => import('../../packages/Input/doc/doc.md')
             },
             {
-              path: 'switch',
+              path: 'Switch',
               name: 'Switch',
               component: () => import('../../packages/Switch/doc/doc.md')
             },
             {
-              path: 'loading',
+              path: 'Loading',
               name: 'Loading',
               component: () => import('../../packages/Loading/doc/doc.md')
             },
@@ -76,6 +76,46 @@ const router = createRouter({
               path: 'Rate',
               name: 'Rate',
               component: () => import('../../packages/Rate/doc/doc.md')
+            },
+            {
+              path: 'Tree',
+              name: 'Tree',
+              component: () => import('../../packages/Tree/doc/doc.md')
+            },
+            {
+              path: 'Badge',
+              name: 'Badge',
+              component: () => import('../../packages/Badge/doc/doc.md')
+            },
+            {
+              path: 'Chatbox',
+              name: 'Chatbox',
+              component: () => import('../../packages/Chatbox/doc/doc.md')
+            },
+            {
+              path: 'Notification',
+              name: 'Notification',
+              component: () => import('../../packages/Notification/doc/doc.md')
+            },
+            {
+              path: 'Scrollbar',
+              name: 'Scrollbar',
+              component: () => import('../../packages/Scrollbar/doc/doc.md')
+            },
+            {
+              path: 'Steps',
+              name: 'Steps',
+              component: () => import('../../packages/Steps/doc/doc.md')
+            },
+            {
+              path: 'Tabs',
+              name: 'Tabs',
+              component: () => import('../../packages/Tabs/doc/doc.md')
+            },
+            {
+              path: 'Skeleton',
+              name: 'Skeleton',
+              component: () => import('../../packages/Skeleton/doc/doc.md')
             }
           ]
         }

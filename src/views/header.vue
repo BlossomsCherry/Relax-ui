@@ -1,36 +1,64 @@
 <template>
   <div class="header">
     <div class="left">
-      <h2>RELAX-UI</h2>
+      <router-link to="/home">
+        <img src="@/assets/logo.png" alt="" />
+        <h2>Relax-UI</h2>
+      </router-link>
     </div>
     <div class="right">
-      <router-link to="/home" :class="{ active: isActive === 0 }" @click="isActive = 0"
-        >指南</router-link
-      >
-      <router-link to="/componentsUI" :class="{ active: isActive === 1 }" @click="isActive = 1"
+      <router-link to="/home" :class="{ active: $route.path === '/home' }">主页</router-link>
+      <router-link to="/componentsUI" :class="{ active: $route.path !== '/home' }"
         >组件</router-link
       >
+      <r-switch v-model="switchVal" :width="45" onColor="#2c2c2c">
+        <i v-if="!switchVal" class="m-icon-loading1"></i>
+        <i v-else class="m-icon-collection_fill"></i>
+      </r-switch>
+
+      <div class="item"></div>
+
+      <a href="https://github.com/BlossomsCherry/Relax-ui" target="_blank" class="github">
+        <img src="@/assets/github.png" alt="" />
+      </a>
     </div>
   </div>
 </template>
 <script setup>
 import { ref } from 'vue'
 
-const isActive = ref(0)
+const switchVal = ref(false)
 </script>
 
 <style lang="less" scoped>
 .header {
   display: flex;
   padding: 0 100px;
-  height: 80px;
+  height: 60px;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
   box-shadow: 0 2px 8px #f0f1f2;
+
   .left {
     width: 200px;
     color: var(--primary-color);
+
+    a {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 50px;
+        cursor: pointer;
+      }
+      h2 {
+        margin: 0;
+        color: var(--primary-color);
+        cursor: pointer;
+      }
+    }
   }
   .right {
     display: flex;
@@ -39,6 +67,7 @@ const isActive = ref(0)
       margin-right: 20px;
       padding: 10px 5px;
       border-bottom: 2px solid transparent;
+      // transition: all 0.3s ease;
       &:hover {
         color: var(--primary-color);
       }
@@ -46,6 +75,20 @@ const isActive = ref(0)
         color: var(--primary-color);
         border-bottom: 2px solid var(--primary-color);
       }
+      &.github {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 20px;
+        }
+      }
+    }
+    .item {
+      margin: 0 8px;
+      width: 2px;
+      height: 22px;
+      background-color: #cacaca;
     }
   }
 }

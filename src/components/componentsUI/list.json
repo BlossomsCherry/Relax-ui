@@ -12,10 +12,6 @@
     "eName": "Icon"
   },
   {
-    "name": "标记",
-    "eName": "Badge"
-  },
-  {
     "name": "按钮",
     "eName": "Button"
   },
@@ -36,8 +32,8 @@
     "eName": "Chatbox"
   },
   {
-    "name": "对话框",
-    "eName": "Dialog"
+    "name": "标记",
+    "eName": "Badge"
   },
   {
     "name": "下拉框",
