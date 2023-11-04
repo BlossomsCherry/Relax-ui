@@ -14,6 +14,7 @@ import rBadge from './Badge/index'
 import rTabs from './Tabs/index'
 import rScrollbar from './Scrollbar/index'
 import rTable from './Table/index'
+import rDialog from './Dialog/index'
 
 const components = [
   rButton,
@@ -28,7 +29,8 @@ const components = [
   rBadge,
   rTabs,
   rScrollbar,
-  rTable
+  rTable,
+  rDialog
 ]
 
 const install = (App) => {
@@ -59,6 +61,7 @@ export {
   rBadge,
   rTabs,
   rScrollbar,
-  rTable
+  rTable,
+  rDialog
 }
 export default RelaxUi

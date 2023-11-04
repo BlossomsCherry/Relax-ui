@@ -83,7 +83,7 @@ const style = computed(() => {
 
       th,
       td {
-        padding: 14px 12px;
+        padding: 8px 12px;
         box-sizing: border-box;
         text-align: left;
         line-height: 20px;

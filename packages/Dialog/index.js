@@ -1,7 +1,7 @@
-import rTree from './index.vue'
+import rDialog from './index.vue'
 
-rTree.install = (app) => {
-  app.component(rTree.name, rTree)
+rDialog.install = (app) => {
+  app.component(rDialog.name, rDialog)
 }
 
-export default rTree
+export default rDialog

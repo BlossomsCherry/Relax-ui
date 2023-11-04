@@ -8,7 +8,7 @@
     :style="style"
     :disabled="disabled"
   >
-    <i :class="isIconClass" v-if="leftIcon"></i>
+    <i :class="isIconClass" style="margin: 0 3px" v-if="leftIcon"></i>
     <span>
       <slot></slot>
     </span>
