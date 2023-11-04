@@ -104,6 +104,10 @@
         "eName": "Message"
       },
       {
+        "name": "消息确认",
+        "eName": "Confirm"
+      },
+      {
         "name": "通知",
         "eName": "Notification"
       },

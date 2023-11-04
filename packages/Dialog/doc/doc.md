@@ -17,7 +17,7 @@
 
 #### Dialog 弹出一个对话框，适合需要定制性更大的场景。
 
-#### 需要设置 _v-model_ 属性，它接收 _Boolean_，当为 _true_ 时显示 Dialog。 Dialog 分为两个部分：_body_ 和 _footer_，_footer_ 需要具名为 _footer_ 的 _slot_ 。 _title_ 属性用于定义标题，它是可选的，默认值为空。
+#### 需要设置 _v-model_ 属性，它接收 _Boolean_，当为 _true_ 时显示 Dialog。 Dialog 分为两个部分：_body_ 和 _footer_，_footer_ 需要具名为 _footer_ 的 _slot_ 。 _title_ 属性用于定义标题，它是可选的，默认值为空。最后，本例还展示了 _before-close_ 的用法。
 
 <br/>
 <component-box>

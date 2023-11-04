@@ -1,6 +1,6 @@
 <template>
-  <r-button type="primary" @click="moduleShow = true"> 打开模态框</r-button>
-  <r-Dialog v-model="moduleShow" title="Tips" width="30%">
+  <r-button type="primary" @click="moduleShow = true"> 打开对话框</r-button>
+  <r-Dialog v-model="moduleShow" title="Tips" width="30%" :before-close="handleClose">
     <span>This is a message</span>
     <template #footer>
       <span>
@@ -12,8 +12,19 @@
 </template>
 <script setup>
 import { ref } from 'vue'
+import Confirm from '../../confirm/index'
 
 const moduleShow = ref(false)
+
+const handleClose = () => {
+  Confirm({
+    text: 'Are you sure to close this dialog?'
+  })
+    .then(() => {
+      moduleShow.value = false
+    })
+    .catch()
+}
 </script>
 
 <style lang="less" scoped></style>

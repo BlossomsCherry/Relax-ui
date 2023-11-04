@@ -122,6 +122,11 @@ const router = createRouter({
               path: 'Table',
               name: 'Table',
               component: () => import('../../packages/Table/doc/doc.md')
+            },
+            {
+              path: 'Confirm',
+              name: 'Confirm',
+              component: () => import('../../packages/Confirm/doc/doc.md')
             }
           ]
         }

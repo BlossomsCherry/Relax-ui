@@ -105,6 +105,9 @@ const isIconClass = computed(() => {
   background-color: #fff;
   color: #666;
   font-size: 90%;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: none;
   cursor: pointer;
 
   &:hover {

@@ -28,7 +28,7 @@
   </div>
 </template>
 <script setup>
-import { ref, computed, nextTick, inject, h, render, defineComponent } from 'vue'
+import { ref, computed, nextTick,  } from 'vue'
 
 const emits = defineEmits(['activeClick'])
 const props = defineProps({

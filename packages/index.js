@@ -15,6 +15,7 @@ import rTabs from './Tabs/index'
 import rScrollbar from './Scrollbar/index'
 import rTable from './Table/index'
 import rDialog from './Dialog/index'
+import Confirm from './Confirm/index'
 
 const components = [
   rButton,
@@ -39,6 +40,7 @@ const install = (App) => {
   })
   App.config.globalProperties.$message = Message
   App.config.globalProperties.$loading = Loading
+  App.config.globalProperties.$confirm = Confirm
 }
 
 const RelaxUi = {
@@ -58,6 +60,7 @@ export {
   rSwitch,
   Message,
   Loading,
+  Confirm,
   rBadge,
   rTabs,
   rScrollbar,

@@ -32,6 +32,10 @@ defineOptions({
 
 const props = defineProps({
   modelValue: Boolean,
+  beforeClose: {
+    type: Function,
+    default: null
+  },
   title: String,
   width: String,
   center: Boolean,
@@ -48,7 +52,13 @@ const DialogStyle = computed(() => {
   }
 })
 
+// 关闭
 const closeDialog = () => {
+  if (props.beforeClose) {
+    props.beforeClose()
+
+    return
+  }
   emits('update:modelValue', false)
 }
 </script>
@@ -69,7 +79,7 @@ const closeDialog = () => {
   right: 0;
   bottom: 0;
   left: 0;
-  overflow: auto;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 99999;
 
