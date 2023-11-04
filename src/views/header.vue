@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="left">
+    <div class="left" :style="{ filter: switchVal ? 'drop-shadow(2px 2px 6px #409eff)' : '' }">
       <router-link to="/home">
         <img src="@/assets/logo.png" alt="" />
         <h2>Relax-UI</h2>
@@ -11,7 +11,7 @@
       <router-link to="/componentsUI" :class="{ active: $route.path !== '/home' }"
         >组件</router-link
       >
-      <r-switch v-model="switchVal" :width="45" onColor="#2c2c2c">
+      <r-switch v-model="switchVal" :width="45" onColor="#2c2c2c" @click="changeDark(switchVal)">
         <i v-if="!switchVal" class="m-icon-loading1"></i>
         <i v-else class="m-icon-collection_fill"></i>
       </r-switch>
@@ -27,7 +27,15 @@
 <script setup>
 import { ref } from 'vue'
 
-const switchVal = ref(false)
+const emit = defineEmits(['changeDark'])
+const switchVal = ref(
+  localStorage.getItem('switchVal') ? JSON.parse(localStorage.getItem('switchVal')) : false
+)
+
+const changeDark = (val) => {
+  localStorage.setItem('switchVal', JSON.stringify(val))
+  emit('changeDark', val)
+}
 </script>
 
 <style lang="less" scoped>
@@ -43,6 +51,7 @@ const switchVal = ref(false)
   .left {
     width: 200px;
     color: var(--primary-color);
+    // filter: drop-shadow(2px 2px 6px #409eff);
 
     a {
       display: flex;

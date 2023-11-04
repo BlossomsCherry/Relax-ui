@@ -8,7 +8,7 @@
         v-highlight
       ><code class="language-html">{{ sourceCode }}</code></pre>
     </transition>
-    <div class="showCode" @click="showOrhideCode">
+    <div class="showCode" @click="codeStatus">
       <span>{{ showCode ? '隐藏代码' : '显示代码' }}</span>
       <i v-if="!showCode" class="m-icon-arrow-down-filling"></i>
       <i v-else class="m-icon-arrow-up-filling"></i>
@@ -36,7 +36,8 @@ const props = defineProps({
 
 const showCode = ref(false)
 const border = ref('1px solid rgba(0,0,0,.06)')
-const showOrhideCode = () => {
+
+const codeStatus = () => {
   showCode.value = !showCode.value
   if (showCode.value) {
     border.value = '0'
@@ -44,6 +45,7 @@ const showOrhideCode = () => {
     border.value = '1px solid rgba(0,0,0,.06)'
   }
 }
+
 const sourceCode = ref('')
 async function getSourceCode() {
   const isDev = import.meta.env.MODE === 'development'
@@ -57,10 +59,11 @@ async function getSourceCode() {
     )
   }
 }
+
+// 复制代码
 const copyCode = () => {
-  const input = document.getElementById('inputCopy')
-  input.value = sourceCode.value
-  input.select()
+  navigator.clipboard.writeText(sourceCode.value)
+
   if (document.execCommand('copy')) {
     document.execCommand('copy')
     Message({
@@ -74,6 +77,7 @@ const copyCode = () => {
     })
   }
 }
+
 onMounted(() => {
   getSourceCode()
 })

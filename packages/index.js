@@ -1,5 +1,4 @@
 //导入所有组件
-import rIcon from './Icon/index'
 import rButton from './Button/index'
 import rInput from './Input/index'
 import rSpace from './Space/index'
@@ -11,8 +10,26 @@ import rCol from './rCol'
 import rSwitch from './Switch'
 import Loading from './Loading/index'
 import Message from './Message/index'
+import rBadge from './Badge/index'
+import rTabs from './Tabs/index'
+import rScrollbar from './Scrollbar/index'
+import rTable from './Table/index'
 
-const components = [rButton, rInput, rSpace, rRate, rLink, rDropdown, rIcon, rRow, rCol, rSwitch]
+const components = [
+  rButton,
+  rInput,
+  rSpace,
+  rRate,
+  rLink,
+  rDropdown,
+  rRow,
+  rCol,
+  rSwitch,
+  rBadge,
+  rTabs,
+  rScrollbar,
+  rTable
+]
 
 const install = (App) => {
   components.forEach((item) => {
@@ -25,6 +42,7 @@ const install = (App) => {
 const RelaxUi = {
   install
 }
+
 export {
   install,
   rButton,
@@ -33,11 +51,14 @@ export {
   rRate,
   rLink,
   rDropdown,
-  rIcon,
   rRow,
   rCol,
   rSwitch,
   Message,
-  Loading
+  Loading,
+  rBadge,
+  rTabs,
+  rScrollbar,
+  rTable
 }
 export default RelaxUi

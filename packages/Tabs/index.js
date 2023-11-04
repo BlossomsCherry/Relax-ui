@@ -1,7 +1,9 @@
-import rTree from './index.vue'
+import rTabs from './index.vue'
+import rPane from './tab-pane.vue'
 
-rTree.install = (app) => {
-  app.component(rTree.name, rTree)
+rTabs.install = (app) => {
+  app.component(rTabs.name, rTabs)
+  app.component(rPane.name, rPane)
 }
 
-export default rTree
+export default rTabs

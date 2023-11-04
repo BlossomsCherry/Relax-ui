@@ -61,7 +61,7 @@ const router = createRouter({
             {
               path: 'Dropdown',
               name: 'Dropdown',
-              component: () => import('../../packages/Dropdown/doc/show.vue')
+              component: () => import('../../packages/Dropdown/doc/doc.md')
             },
             {
               path: 'Link',
@@ -89,9 +89,9 @@ const router = createRouter({
               component: () => import('../../packages/Badge/doc/doc.md')
             },
             {
-              path: 'Chatbox',
-              name: 'Chatbox',
-              component: () => import('../../packages/Chatbox/doc/doc.md')
+              path: 'Dialog',
+              name: 'Dialog',
+              component: () => import('../../packages/Dialog/doc/doc.md')
             },
             {
               path: 'Notification',
@@ -117,6 +117,11 @@ const router = createRouter({
               path: 'Skeleton',
               name: 'Skeleton',
               component: () => import('../../packages/Skeleton/doc/doc.md')
+            },
+            {
+              path: 'Table',
+              name: 'Table',
+              component: () => import('../../packages/Table/doc/doc.md')
             }
           ]
         }

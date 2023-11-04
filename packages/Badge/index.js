@@ -1,7 +1,7 @@
-import rTree from './index.vue'
+import rBadge from './index.vue'
 
-rTree.install = (app) => {
-  app.component(rTree.name, rTree)
+rBadge.install = (app) => {
+  app.component(rBadge.name, rBadge)
 }
 
-export default rTree
+export default rBadge

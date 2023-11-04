@@ -1,7 +1,7 @@
-import rTree from './index.vue'
+import rScrollbar from './index.vue'
 
-rTree.install = (app) => {
-  app.component(rTree.name, rTree)
+rScrollbar.install = (app) => {
+  app.component(rScrollbar.name, rScrollbar)
 }
 
-export default rTree
+export default rScrollbar

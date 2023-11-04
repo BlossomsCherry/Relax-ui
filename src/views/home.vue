@@ -3,10 +3,10 @@
     <div class="logo">
       <img src="@/assets/logo.png" alt="" />
     </div>
-    <h1>一套适合开发者使用的轻量级UI组件库，完美支持vue3</h1>
+    <h1>一套适合开发者使用的轻量级UI组件库，完美支持Vue3</h1>
     <div class="description-box">
       <p>
-        完美支持vite+vue3版本，更小的体积，更快的响应，更强的拓展性，让我们一起向未来，拥抱这精彩的vue世界！
+        完美支持vite+Vue3版本，更小的体积，更快的响应，更强的拓展性，让我们一起向未来，拥抱这精彩的Vue世界！
       </p>
       <div class="buttonGroups">
         <r-button type="primary" @click="$router.push('/componentsUI')">立即体验</r-button>
@@ -31,7 +31,7 @@ const cardValue = [
   },
   {
     title: '更快的响应',
-    text: '配合vue3的composition API，更快的相应。'
+    text: '配合Vue3的Composition API，更快的相应。'
   },
   {
     title: '更强的拓展性',
@@ -39,7 +39,7 @@ const cardValue = [
   },
   {
     title: '更完美的支持',
-    text: '专为vue3版本开发。'
+    text: '专为Vue3版本开发。'
   },
   {
     title: '更友好的渲染',
@@ -57,7 +57,7 @@ const openGithub = () => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // background-color: #fafefe;
+
   .logo {
     margin-top: 80px;
     height: 200px;

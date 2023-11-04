@@ -16,14 +16,15 @@ import Header from './header.vue'
 </script>
 
 <style lang="less" scoped>
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-}
-.content {
-  // margin-top: 90px;
+.layout {
+  width: 100%;
+  height: 100vh;
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
 }
 </style>
