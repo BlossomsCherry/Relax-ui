@@ -79,8 +79,8 @@ const blur = (e) => {
 }
 
 //清空输入框
-const clear = () => {
-  emit('update:modelValue', '')
+const clear =async () => {
+ await emit('update:modelValue', '')
   emit('clear')
 }
 </script>

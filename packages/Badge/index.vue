@@ -1,5 +1,5 @@
 <template>
-  <div class="m-badge">
+  <div class="r-badge">
     <slot></slot>
 
     <template v-if="!hidden">
@@ -24,12 +24,12 @@ defineProps({
   dot: Boolean,
   value: [String, Number],
   hidden: Boolean,
-  max: [Number,String]
+  max: [Number, String]
 })
 </script>
 
 <style lang="less" scoped>
-.m-badge {
+.r-badge {
   position: relative;
   /* 防止文本换行，并使文本保持在一行内，直到达到容器的边界 */
   white-space: nowrap;

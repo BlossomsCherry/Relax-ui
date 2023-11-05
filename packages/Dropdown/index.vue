@@ -68,12 +68,12 @@ const isShow = ref(false)
 
 const enterShow = () => {
   if (props.trigger === 'hover') {
-    isShow.value = true
+    isShow.value = !isShow.value
   }
 }
 
 const clickShow = () => {
-  if (props.trigger === 'click') isShow.value = true
+  if (props.trigger === 'click') isShow.value =!isShow.value
 }
 
 const change = (item, index) => {
