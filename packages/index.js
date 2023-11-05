@@ -16,6 +16,8 @@ import rScrollbar from './Scrollbar/index'
 import rTable from './Table/index'
 import rDialog from './Dialog/index'
 import Confirm from './Confirm/index'
+import rDrawer from './Drawer/index'
+import rRadio from './Radio/index'
 
 const components = [
   rButton,
@@ -31,7 +33,9 @@ const components = [
   rTabs,
   rScrollbar,
   rTable,
-  rDialog
+  rDialog,
+  rDrawer,
+  rRadio
 ]
 
 const install = (App) => {
@@ -65,6 +69,8 @@ export {
   rTabs,
   rScrollbar,
   rTable,
-  rDialog
+  rDialog,
+  rDrawer,
+  rRadio
 }
 export default RelaxUi

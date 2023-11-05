@@ -16,7 +16,6 @@
     <div class="main">
       <router-view></router-view>
     </div>
-    <div class="right"></div>
   </div>
 </template>
 <script setup>
@@ -36,6 +35,7 @@ const list = ref(menuList)
     display: flex;
     padding: 0px 32px 96px 87px;
     width: 321px;
+    height: 100%;
     flex-direction: column;
     box-sizing: border-box;
     overflow-y: auto;
@@ -76,8 +76,9 @@ const list = ref(menuList)
   .main {
     flex: 1;
     padding-bottom: 50px;
-    margin-left: 50px;
-    // margin: 0 200px 0 50px;
+    // margin-left: 50px;
+    margin: 0 200px 0 50px;
+    // margin-right: 200px;
     overflow: scroll;
   }
   .right {

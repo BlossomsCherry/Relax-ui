@@ -127,6 +127,17 @@ const router = createRouter({
               path: 'Confirm',
               name: 'Confirm',
               component: () => import('../../packages/Confirm/doc/doc.md')
+            },
+            {
+              path: 'Drawer',
+              name: 'Drawer',
+              component: () => import('../../packages/Drawer/doc/doc.md')
+            },
+
+            {
+              path: 'Radio',
+              name: 'Radio',
+              component: () => import('../../packages/Radio/doc/doc.md')
             }
           ]
         }

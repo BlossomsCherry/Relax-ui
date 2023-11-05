@@ -38,6 +38,10 @@
         "eName": "Input"
       },
       {
+        "name": "单选框",
+        "eName": "Radio"
+      },
+      {
         "name": "表单",
         "eName": "Form"
       },
@@ -114,6 +118,10 @@
       {
         "name": "对话框",
         "eName": "Dialog"
+      },
+      {
+        "name": "抽屉",
+        "eName": "Drawer"
       }
     ]
   }
