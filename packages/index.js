@@ -18,6 +18,8 @@ import rDialog from './Dialog/index'
 import Confirm from './Confirm/index'
 import rDrawer from './Drawer/index'
 import rRadio from './Radio/index'
+import rSkeleton from './Skeleton/index'
+// import Notification from './Notification/index'
 
 const components = [
   rButton,
@@ -35,7 +37,8 @@ const components = [
   rTable,
   rDialog,
   rDrawer,
-  rRadio
+  rRadio,
+  rSkeleton
 ]
 
 const install = (App) => {
@@ -45,6 +48,7 @@ const install = (App) => {
   App.config.globalProperties.$message = Message
   App.config.globalProperties.$loading = Loading
   App.config.globalProperties.$confirm = Confirm
+  // App.config.globalProperties.$notification = Notification
 }
 
 const RelaxUi = {
@@ -71,6 +75,8 @@ export {
   rTable,
   rDialog,
   rDrawer,
-  rRadio
+  rRadio,
+  rSkeleton
+  // Notification
 }
 export default RelaxUi

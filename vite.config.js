@@ -19,7 +19,23 @@ export default defineConfig({
     },
     rollupOptions: {
       // 此处添加外部依赖项（如 Vue），以避免将其打包进你的库中
-      external: ['vue'],
+      external: [
+        'vue',
+        'highlight.js',
+        'jest',
+        'pinia',
+        'less',
+        'vite-plugin-md',
+        'vue-router',
+        '@babel/preset-env',
+        '@vitejs/plugin-vue',
+        '@vue/test-utils',
+        'babel-jest',
+        'eslint',
+        'eslint-plugin-vue',
+        'vite',
+        'vue-jest'
+      ],
       output: {
         // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
         globals: {

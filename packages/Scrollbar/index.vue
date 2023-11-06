@@ -31,6 +31,7 @@ const style = computed(() => {
 .r-scrollbar {
   width: 100%;
   overflow: auto;
+  overflow-x: scroll;
   box-sizing: border-box;
 
   .r-scrollbar_bar {
@@ -45,14 +46,12 @@ const style = computed(() => {
   &::-webkit-scrollbar {
     visibility: hidden;
     width: 5px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    height: 5px;
   }
 
   &:hover {
     /* 设置浏览器滚动条样式 */
     &::-webkit-scrollbar {
-      // width: 5px;
       height: 5px;
     }
 

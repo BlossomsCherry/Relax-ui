@@ -64,7 +64,8 @@ onMounted(() => {
 
 div.slide-fade-enter-from,
 div.slide-fade-leave-to {
-  transform: translate3d(-50%, -75px, 0);
+  transform: translate(-50%, -65px);
+  opacity: 0;
 }
 
 .message {

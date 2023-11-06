@@ -4,6 +4,7 @@
     import demo3 from './demo3.vue'
     import demo4 from './demo4.vue'
     import demo5 from './demo5.vue'
+    import Attributes from './Attributes.vue'
     import componentsBox from '@/components/componentBox.vue'
     import Preview from '@/components/Preview.vue'
 </script>
@@ -23,6 +24,7 @@
     <demo1/>
 </componentsBox>
 <Preview compName="Button" demoName="demo1"></Preview>
+<br/>
 
 ## 禁用状态
 
@@ -33,6 +35,7 @@
     <demo2/>
 </componentsBox>
 <Preview compName="Button" demoName="demo2"></Preview>
+<br/>
 
 ## 图标按钮
 
@@ -43,6 +46,7 @@
     <demo4/>
 </componentsBox>
 <Preview compName="Button" demoName="demo3"></Preview>
+<br/>
 
 ## 加载状态
 
@@ -53,13 +57,23 @@
     <demo3/>
 </componentsBox>
 <Preview compName="Button" demoName="demo4"></Preview>
+<br/>
 
 ## 自定义颜色
 
-#### 可以自定义颜色的按钮类型——通过设置 _type_ 为 _custom_ 和 _customColor_ 属性设置实现
+#### 可以自定义颜色的按钮类型——通过设置 _type_ 为 _customColor_ 属性设置实现
 
 <br/>
 <componentsBox>
     <demo5/>
 </componentsBox>
 <Preview compName="Button" demoName="demo5"></Preview>
+<br/>
+
+# Button API
+
+## Button Attributes
+
+<br/>
+<attributes/>
+<br/>

@@ -1,6 +1,8 @@
 <script setup>
     import demo1 from './demo1.vue'
     import demo2 from './demo2.vue'
+    import Attributes1 from '../../rRow/Attributes.vue'
+    import Attributes2 from '../../rCol/Attributes.vue'
     import componentBox from '@/components/componentBox.vue'
     import Preview from '@/components/Preview.vue'
 </script>
@@ -32,3 +34,20 @@
     <demo2/>
 </component-box>
 <Preview compName="Layout" demoName="demo2"></Preview>
+<br/>
+
+# Row API
+
+## Row Attributes
+
+<br/>
+<attributes1/>
+<br/>
+
+# Col API
+
+## Col Attributes
+
+<br/>
+<attributes2/>
+<br/>
